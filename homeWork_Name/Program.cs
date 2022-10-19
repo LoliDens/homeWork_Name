@@ -12,26 +12,22 @@ namespace homeWork_Name
         {
             string userName;
             char userSymbol;
-            int stringLongh;
+            string lineChar = "";
+            int addChar = 2;
 
             Console.Write("Введите имя: ");
             userName= Console.ReadLine();
             Console.Write("Введите символ: ");
             userSymbol = Char.Parse(Console.ReadLine());
-            stringLongh = userName.Length;
 
-            for (int i = 0; i < stringLongh; i++) 
+            for (int i = 0; i < userName.Length + addChar; i++) 
             {
-                Console.Write($"{userSymbol} ");
+                lineChar += userSymbol;
             }
 
-            Console.WriteLine();
-            Console.WriteLine($"{userSymbol} {userName} {userSymbol}");
-
-            for (int i = 0; i < stringLongh; i++)
-            {
-                Console.Write($"{userSymbol} ");
-            }
+            Console.WriteLine(lineChar);
+            Console.WriteLine(userSymbol + userName + userSymbol);
+            Console.WriteLine(lineChar);
 
             Console.ReadKey();
         }
