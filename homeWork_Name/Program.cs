@@ -13,20 +13,21 @@ namespace homeWork_Name
             string userName;
             char userSymbol;
             string lineChar = "";
-            int addChar = 2;
+            string userNameAndSymbols;
 
             Console.Write("Введите имя: ");
             userName= Console.ReadLine();
             Console.Write("Введите символ: ");
             userSymbol = Char.Parse(Console.ReadLine());
+            userNameAndSymbols = userSymbol + userName + userSymbol;
 
-            for (int i = 0; i < userName.Length + addChar; i++) 
+            for (int i = 0; i < userNameAndSymbols.Length; i++) 
             {
                 lineChar += userSymbol;
             }
 
             Console.WriteLine(lineChar);
-            Console.WriteLine(userSymbol + userName + userSymbol);
+            Console.WriteLine(userNameAndSymbols);
             Console.WriteLine(lineChar);
 
             Console.ReadKey();
